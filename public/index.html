@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interview Practice Partner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="app">
+    <header>
+      <h1>Interview Practice Partner</h1>
+      <div class="small">Mock interviews with follow-ups & final feedback.</div>
+    </header>
+
+    <div class="controls">
+      <label>Role</label>
+      <select id="roleSelect">
+        <option>Software Engineer</option>
+        <option>Frontend Engineer</option>
+        <option>Backend Engineer</option>
+        <option>Data Scientist</option>
+        <option>Sales Representative</option>
+        <option>Retail Associate</option>
+        <option>Product Manager</option>
+      </select>
+
+      <label>Level</label>
+      <select id="levelSelect">
+        <option>Junior</option>
+        <option>Mid</option>
+        <option>Senior</option>
+      </select>
+
+      <button id="startBtn">Start</button>
+      <button id="endBtn" disabled>End & Feedback</button>
+    </div>
+
+    <div class="main">
+      <section class="panel chat">
+        <div class="messages" id="messages"></div>
+
+        <div class="composer">
+          <textarea id="input" placeholder="Type your answer..."></textarea>
+          <button id="sendBtn">Send</button>
+          <button id="micBtn">🎤</button>
+        </div>
+      </section>
+
+      <aside class="side">
+        <div class="card">
+          <div class="small">Session Info</div>
+          <div>Role: <span id="infoRole" class="pill">-</span></div>
+          <div>Level: <span id="infoLevel" class="pill">-</span></div>
+          <div>Rounds: <span id="rounds" class="pill">0</span></div>
+        </div>
+
+        <div class="card">
+          <div class="small">Transcript</div>
+          <div class="transcript" id="transcript"></div>
+        </div>
+
+        <button id="downloadBtn" class="download">Download Transcript</button>
+      </aside>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
